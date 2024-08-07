@@ -1,0 +1,43 @@
+body {
+    background-color: #0e0d0d;
+    font-family: "Roboto", sans-serif;
+  }
+  
+  .container {
+    max-width: 400px;
+  }
+  
+  .glassmorphism-calculator {
+    background-color: rgba(225, 23, 225, 0.2);
+    backdrop-filter: blur(8px);
+  }
+  
+  .calculator-button {
+    transition: background-color 0.3s, transform 0.2s;
+  }
+  
+  .calculator-button:hover {
+    background-color: rgba(99, 7, 84, 0.8);
+    transform: scale(1.05);
+  }
+  
+  .result-screen {
+    animation: fadeIn 0.5s ease;
+    background-color: #e5e7eb;
+    color: #4e4b4e;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  .glassmorphism-calculator {
+    border: 2px solid #fff; /* white border */
+    border-radius: 10px; /* rounded corners */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* shadow effect */
+  }

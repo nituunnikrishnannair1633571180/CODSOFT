@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css"> 
+    <style>
+        body {
+            background-color: #000; /* black background */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+     .number-button {
+            background-color: #7A288A; /* purple background */
+        }
+     .number-button:hover {
+            background-color: #5C0011; /* dark purple hover */
+        }
+     .sign-button {
+            background-color: #808080; /* grey background */
+        }
+     .sign-button:hover {
+            background-color: #666666; /* dark grey hover */
+        }
+     .equals-button {
+            background-color: #008000; /* green background */
+        }
+     .equals-button:hover {
+            background-color: #00CC00; /* light green hover */
+        }
+    </style>
+</head>
+<body>
+    <div class="glassmorphism-calculator p-6 rounded-lg shadow-lg w-80 h-120 border-2 border-white rounded-md">
+        <div class="result-screen bg-gray-200 rounded-lg p-4 text-right text-3xl font-bold mb-4" id="output">0</div>
+        <div class="grid grid-cols-4 gap-4">
+            <button class="sign-button rounded-lg p-4 text-white font-bold" onclick="clearScreen()">C</button>
+            <button class="sign-button rounded-lg p-4 text-white font-bold" onclick="appendToScreen('%')">%</button>
+            <button class="sign-button rounded-lg p-4 text-white font-bold" onclick="appendToScreen('/')">/</button>
+            <button class="sign-button rounded-lg p-4 text-white font-bold" onclick="appendToScreen('*')">*</button>
+            <button class="number-button rounded-lg p-4 text-white font-bold" onclick="appendToScreen('7')">7</button>
+            <button class="number-button rounded-lg p-4 text-white font-bold" onclick="appendToScreen('8')">8</button>
+            <button class="number-button rounded-lg p-4 text-white font-bold" onclick="appendToScreen('9')">9</button>
+            <button class="sign-button rounded-lg p-4 text-white font-bold" onclick="appendToScreen('-')">-</button>
+            <button class="number-button rounded-lg p-4 text-white font-bold" onclick="appendToScreen('4')">4</button>
+            <button class="number-button rounded-lg p-4 text-white font-bold" onclick="appendToScreen('5')">5</button>
+            <button class="number-button rounded-lg p-4 text-white font-bold" onclick="appendToScreen('6')">6</button>
+            <button class="sign-button rounded-lg p-4 text-white font-bold" onclick="appendToScreen('+')">+</button>
+            <button class="number-button rounded-lg p-4 text-white font-bold" onclick="appendToScreen('1')">1</button>
+            <button class="number-button rounded-lg p-4 text-white font-bold" onclick="appendToScreen('2')">2</button>
+            <button class="number-button rounded-lg p-4 text-white font-bold" onclick="appendToScreen('3')">3</button>
+            <button class="number-button rounded-lg p-4 text-white font-bold" onclick="appendToScreen('0')">0</button>
+            <button class="number-button rounded-lg p-4 text-white font-bold" onclick="appendToScreen('.')">.</button>
+            <button class="sign-button rounded-lg p-4 text-white font-bold" onclick="deleteLastCharacter()">X</button>
+            <button class="equals-button rounded-lg p-4 text-white font-bold col-span-2" onclick="evaluateExpression()">=</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
